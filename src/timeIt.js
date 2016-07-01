@@ -3,7 +3,8 @@ module.exports = function timeIt(times, name, func) {
     while(times-- > 0) {
         var start = process.hrtime();
         var res = func();
-        var elapsed = process.hrtime(start)[1] / 1000000;
+        var hrend = process.hrtime(start);
+        var elapsed =  hrend[0] * 1000 + hrend[1] / 1000000;
         timingArr.push(parseFloat(elapsed.toFixed(3)));
     }
     

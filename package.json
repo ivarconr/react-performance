@@ -1,0 +1,21 @@
+{
+  "name": "react-performance",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm build/*.* && babel src --out-dir build",
+    "start": "npm run build && node build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-preset-react": "^6.11.1",
+    "source-map": "^0.5.6"
+  }
+}

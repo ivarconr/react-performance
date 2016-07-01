@@ -5,6 +5,12 @@ var VanillaComponent = require('./VanillaComponent');
 var timeIt = require('./timeIt');
 
 timeIt(100, "react", () => {
+    return ReactDOMServer.renderToString(React.createFactory(ReactComponent)({
+        a: "hello"
+    }));
+});
+
+timeIt(100, "react-static", () => {
     return ReactDOMServer.renderToStaticMarkup(React.createFactory(ReactComponent)({
         a: "hello"
     }));
